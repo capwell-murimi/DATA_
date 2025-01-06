@@ -34,21 +34,53 @@ df["STARS"] = df["STARS"].str.lstrip("s:")
 
 
 
-df["DIRECTOR"] = df["DIRECTOR"].fillna('unknown')
-df["STARS"] = df["STARS"].fillna('unknown')
+df["DIRECTOR"] = df["DIRECTOR"].fillna('Unknown')
+df["STARS"] = df["STARS"].fillna('Unknown')
+
+
+df["RATING"] = df["RATING"].apply(lambda y: str(y))
+df["RATING"] = df["RATING"].str.replace("nan", "Unknown")
+
+
+
+
+df["VOTES"] = df["VOTES"].apply(lambda x: str(x))
+df["VOTES"] = df["VOTES"].str.replace("nan", "Unknown")
+
+
+
+df["RunTime"] = df["RunTime"].apply(lambda x: str(x))
+df["RunTime"] = df["RunTime"].str.replace("nan", "Unknown")
 
 
 
 
 df["Gross"] = df["Gross"].str.strip("$ M")
+df["Gross"] = df["Gross"].apply(lambda x: str(x))
+df["Gross"] = df["Gross"].str.replace("nan", "Unknown")
 
-df["RATING"] = df["RATING"].apply(lambda y: str(y))
-df['RATING'] = df["RATING"].fillna('')
 
-df["Gross"] = df["Gross"].fillna(0).apply(lambda x: float(x))
 
 df = df.drop(columns="OUR_STARS")
-row_79 = df.iloc[77]
 
+
+df = df[["MOVIES","YEAR","GENRE","RATING","ONE-LINE","DIRECTOR","STARS","VOTES","RunTime","Gross"]]
+
+
+df = df.rename(columns= str.upper)
+
+
+df.to_excel("cleaned_movies.xlsx", index=False)
+
+
+
+
+#row_79 = df.iloc[77]
+
+
+
+#rating_datatype = df.dtypes["RATING"]
+
+#print(rating_datatype)
 
 print(df)
