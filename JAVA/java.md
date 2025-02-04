@@ -3,7 +3,7 @@
 I am attempting to learn Java from scratch. Here are the topics I will cover:
 
 1. **GUI**
-    ![GUI] (https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcYPdFPeax8T3oIeSszAeCssv2DsYgFR-RbA&s)
+    ![GUI](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcYPdFPeax8T3oIeSszAeCssv2DsYgFR-RbA&s)
 
 2. **Math**
     ![Math](https://starfisheyes.weebly.com/uploads/5/8/7/9/58797059/796986_orig.png)
