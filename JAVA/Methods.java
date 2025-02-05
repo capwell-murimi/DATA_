@@ -1,9 +1,18 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Methods {
     public static void main(String[] args) {
 
         factorial(5);
-        prime(5);
-        
+        prime(77);
+        reverse("cow");
+
+        int[] numbers = {1,2,3,6,7,45,67,69};
+        findmax(numbers);
+
+        add(1234);
+     
     }
     //factorial with loops
     static void factorial(int n){
@@ -14,24 +23,62 @@ public class Methods {
         System.out.println(factor);
     }
 
+    //prime number
     static boolean prime(int n){
         if (n<=1){
             return false;
         }
 
-        for(int i = 2;i < n-1;i++){
+        for(int i = 2; i <= java.lang.Math.sqrt(n); i++){
             if(n % i == 0){
-                System.out.println("Not prime");
+                System.out.println("Not Prime");
                 return false;
             }
-
-            else{
-                System.out.println("Prime");
-                return true;
-            }
         }
-
+        
+        System.out.println("Prime");
         return true;
 
     }
+
+
+   //resverse a string
+    static void reverse(String s){
+        for (int i = s.length()-1; i >= 0; i--){
+            String newword = "";
+            newword = newword + s.charAt(i);
+            System.out.print(newword);
+        }
+        System.out.println();
+    }
+
+    //find max in an array
+    static void findmax(int[] numbers){
+        int max = numbers[0];
+        for(int i = 1; i < numbers.length; i++){
+            if (numbers[i] > max){
+                max = numbers[i];
+
+            }
+        }
+        System.out.println("Max is: "+max);
+    }
+
+
+    //add digits of a number
+    static void add(int n){
+       List<Integer> numbers = new ArrayList<>();
+       while(n > 0){
+        int digit = n % 10;
+        numbers.add(0,digit);
+        n = n/10;
+       }
+
+       int sumn = 0;
+       for(int i = 0; i < numbers.size(); i++){
+        sumn = sumn + numbers.get(i);
+       }
+       System.out.println(sumn);
+    }
+
 }
