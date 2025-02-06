@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Methods {
@@ -12,6 +13,8 @@ public class Methods {
         findmax(numbers);
 
         add(1234);
+
+        anogram("Kitchen", "Kitchen");
      
     }
     //factorial with loops
@@ -81,4 +84,27 @@ public class Methods {
        System.out.println(sumn);
     }
 
+
+    static void anogram(String s1, String s2){
+
+        s1.toLowerCase();
+        s2.toLowerCase();
+        if(s1.length() != s2.length()){
+            System.out.println("Hii sio anogram");
+        }
+        else{
+            char[] s1array = s1.toCharArray();
+            char[] s2array = s2.toCharArray();
+
+            Arrays.sort(s1array);
+            Arrays.sort(s2array);
+
+            if(Arrays.equals(s1array, s2array)){
+                System.out.println("Hii ni anogram");
+            }
+            else{
+                System.out.println("Hii sio anogram");
+            }
+        }
+    }
 }
