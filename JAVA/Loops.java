@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Loops {
+    @SuppressWarnings("resource")
     public static void main(String[] args){
         //while loop
         Scanner scanner = new Scanner(System.in);
