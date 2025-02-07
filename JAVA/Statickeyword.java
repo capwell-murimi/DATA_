@@ -1,4 +1,5 @@
 public class Statickeyword {
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         Friends friend1 = new Friends("Capwell");
         Friends friend2 = new Friends("Kim");
