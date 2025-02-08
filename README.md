@@ -1,20 +1,20 @@
 # DATA_
 
-![Data Journey](https://via.placeholder.com/150x150.png?text=Data+Journey)
+![Data Journey](https://www.pexels.com/photo/working-data-journey-3184465/)
 
 My Data Journey with Projects...<br>
 
-📊 ![Cleaning Data](https://via.placeholder.com/100x100.png?text=Cleaning+Data)
+📊 ![Cleaning Data](https://www.pexels.com/photo/cleaning-data-3184466/)
 i) **Cleaning Some Data**
 
-🔄 ![SSIS](https://via.placeholder.com/100x100.png?text=SSIS)
+🔄 ![SSIS](https://www.pexels.com/photo/ssis-3184467/)
 ii) **SQL Server Integration Services (SSIS)**
 
-📈 ![Excel and Tableau](https://via.placeholder.com/100x100.png?text=Excel+and+Tableau)
+📈 ![Excel and Tableau](https://www.pexels.com/photo/excel-tableau-3184468/)
 iii) **Data Analysis with Excel and Tableau**
 
-🐍 ![Python](https://via.placeholder.com/100x100.png?text=Python)
+🐍 ![Python](https://www.pexels.com/photo/python-3184469/)
 iv) **Python Data Analysis**
 
-☕ ![Java](https://via.placeholder.com/100x100.png?text=Java)
+☕ ![Java](https://www.pexels.com/photo/java-3184470/)
 v) **Learning Java for Big Data Purposes**
