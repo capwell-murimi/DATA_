@@ -21,4 +21,12 @@ public class Car extends Vehicle{
         this.doors = doors;
         return this.doors;
     }
+
+
+    void copy(Car x){
+        this.setName(x.getName());
+        this.setModel(x.getModel());
+        this.setPrice(x.getPrice());
+        this.setDoors(x.getDoors());
+    }
 }
