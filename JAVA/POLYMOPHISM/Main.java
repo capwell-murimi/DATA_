@@ -5,6 +5,8 @@ public class Main {
         Animal animal = new Animal();
         Cat cat = new Cat();
         Dog dog = new Dog();
+
+        
         Animal animal2 = new Cat();
 
         animal2.sound();
