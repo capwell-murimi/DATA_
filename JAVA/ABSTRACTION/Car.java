@@ -1,11 +1,10 @@
 package ABSTRACTION;
 
 
-public class Car {
+public class Car extends Vehicle{
 
-    String name;
    Car(String name){
-        this.name = name;
+        super(name);
    }
 
    void name(){
