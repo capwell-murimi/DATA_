@@ -1,3 +1,4 @@
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Frame;
 import java.awt.Image;
@@ -19,7 +20,10 @@ public class Labels {
         ImageIcon icon = new ImageIcon("C:\\Users\\CapwellTheNerd\\Desktop\\DATA_\\JAVA\\n" + //
                         "dovu.jpg");
         label.setText("Hello");
-        label.setIcon(icon);
+        label.setForeground(Color.DARK_GRAY);
+        label.setVerticalAlignment(JLabel.TOP);
+        label.setHorizontalAlignment(JLabel.CENTER);
+        //label.setIcon(icon);
 
 
         
@@ -60,6 +64,7 @@ public class Labels {
         greenFrame.setBackground(Color.green);
         greenFrame.setBounds(0, 260, 600, 100);
         greenFrame.setVisible(true);
+        greenFrame.setLayout(new BorderLayout());
         greenFrame.add(label);
 
 
