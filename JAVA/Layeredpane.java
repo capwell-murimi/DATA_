@@ -28,8 +28,8 @@ public class Layeredpane {
         
 
         layeredPane.setBounds(0, 0, 500, 500);
-        layeredPane.add(label1,Integer.valueOf(1));
-        layeredPane.add(label2, Integer.valueOf(0));
+        layeredPane.add(label1,Integer.valueOf(0));
+        layeredPane.add(label2,Integer.valueOf(1));
         layeredPane.add(label3,Integer.valueOf(2));
 
 
