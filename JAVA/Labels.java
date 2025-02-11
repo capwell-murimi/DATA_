@@ -3,6 +3,7 @@ import java.awt.Frame;
 import java.awt.Image;
 import java.awt.Panel;
 
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -12,10 +13,13 @@ public class Labels {
     public static void main(String[] args) {
         JPanel whiteframe = new JPanel();
         JPanel redframe = new JPanel();
+        JLabel label = new JLabel();
       //  JPanel blueframe = new JPanel();
 
         ImageIcon icon = new ImageIcon("C:\\Users\\CapwellTheNerd\\Desktop\\DATA_\\JAVA\\n" + //
                         "dovu.jpg");
+        label.setText("Hello");
+        label.setIcon(icon);
 
 
         
@@ -56,6 +60,7 @@ public class Labels {
         greenFrame.setBackground(Color.green);
         greenFrame.setBounds(0, 260, 600, 100);
         greenFrame.setVisible(true);
+        greenFrame.add(label);
 
 
 
