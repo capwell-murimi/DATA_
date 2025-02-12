@@ -268,7 +268,26 @@ public class Main {
        ArrayList<WeatherData> weatherDataList = new ArrayList<>();
 
     try {
-        BufferedReader br = new BufferedReader(new FileReader(fileName));
+
+        Scanner scanner = new Scanner(new File(fileName));
+
+        scanner.nextLine();
+
+        
+
+        while(scanner.hasNextLine()){
+            String[] readSplit = scanner.nextLine().split(",");
+
+            String date = readSplit[0];
+            double temparature = Double.parseDouble(readSplit[1]);
+            double humidity = Double.parseDouble(readSplit[2]);
+
+            WeatherData data = new WeatherData(date, temparature, humidity);
+            weatherDataList.add(data);
+
+        }
+
+        /*BufferedReader br = new BufferedReader(new FileReader(fileName));
         String line;
         br.readLine();
         while((line = br.readLine()) != null){
@@ -280,7 +299,9 @@ public class Main {
 
             WeatherData data = new WeatherData(date, temperature, humidity);
             weatherDataList.add(data);
-        }
+        }*/
+       //br.close();
+       scanner.close();
     } catch (Exception e) {
         System.out.println("Error occured");
     }
