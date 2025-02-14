@@ -29,6 +29,7 @@ public class Myframe extends JFrame implements ActionListener{
         this.add(label);
     }
 
+    
     @Override
     public void actionPerformed(ActionEvent e){
         if(e.getSource() == button){

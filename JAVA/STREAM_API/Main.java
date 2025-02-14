@@ -1,5 +1,6 @@
 package STREAM_API;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
@@ -10,9 +11,18 @@ public class Main {
 
         Stream<Integer> data = nums.stream();
 
-        long count = data.count();
-        System.out.println(count);
+        Stream<Integer> mappedData = data.map(n -> n*2);
+        mappedData.forEach(n -> System.out.println(n));
 
-        data.forEach(n -> System.out.println(n));
+
+
+
+        List<Integer> new_nums = new ArrayList<>();
+        for(int i =0; i < nums.size();i++){
+           int twice = nums.get(i) * 2;
+           new_nums.add(twice);
+        }
+
+        new_nums.forEach(n -> System.out.println(n));
     }
 }
