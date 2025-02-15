@@ -1,0 +1,16 @@
+package PREDICATE;
+
+import java.util.function.Predicate;
+
+public class Main {
+    public static void main(String[] args) {
+        Predicate<Integer> p = i -> (i > 10);
+        System.out.println(p.test(6));
+
+        Predicate<String> l = s -> (s.length() > 4);
+        System.out.println(l.test("cow"));
+
+        String[] names = {"David","Scott","Smith","John","Mary"};
+        
+    }
+}
