@@ -11,6 +11,19 @@ public class Main {
         System.out.println(l.test("cow"));
 
         String[] names = {"David","Scott","Smith","John","Mary"};
-        
+
+
+       for(int i = 0; i < names.length;i++){
+            if (l.test(names[i])) {
+                System.out.println(names[i]);
+            }
+        }
+
+        for(String i: names){
+            if(l.test(i)){
+                System.out.println(i);
+            }
+        }
     }
 }
+;
