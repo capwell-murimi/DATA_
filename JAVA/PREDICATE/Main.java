@@ -18,6 +18,7 @@ public class Main {
                 System.out.println(names[i]);
             }
         }
+        
 
         for(String i: names){
             if(l.test(i)){
