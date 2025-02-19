@@ -4,6 +4,7 @@ df = dragonWarrior.read_csv(r'C:\Users\CapwellTheNerd\Desktop\DATA_\DATA_PROJECT
 
 new_column = df.groupby('Nation')['Player'].count()
 
+
 #nations = df['Nation'].count()
 
-print(df)
+print(new_column)
