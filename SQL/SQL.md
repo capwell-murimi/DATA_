@@ -1,3 +1,4 @@
+# https://pgexercises.com/
 # Basics of SQL
 
 ## Exercise 1
@@ -20,3 +21,4 @@ If you struggle with these questions, I strongly recommend *Learning SQL* by Ala
 - Combining results from multiple queries
 - Simple aggregation
 - More aggregation
+
