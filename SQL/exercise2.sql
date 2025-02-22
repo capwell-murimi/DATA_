@@ -99,3 +99,17 @@ SELECT DISTINCT CONCAT(firstname,' ',surname) AS member,
 --the name of the member formatted as a single column, and the cost. Order by descending cost.
 
 
+SELECT member,facility,cost FROM (
+    SELECT CONCAT(mem.firstname,' ',mem.surname) as member,fac.name as facility,
+    CASE
+        WHEN mem.memid = 0 THEN book.slots*fac.guestcost
+        ELSE book.slots*fac.membercost
+    END AS cost
+    FROM cd.members mem
+
+    JOIN cd.bookings book ON mem.memid = book.memid
+    JOIN cd.facilities fac ON book.facid = fac.facid
+    WHERE book.starttime >= '2012-09-14' AND book.starttime < '2012-09-15'
+) as bookings
+WHERE cost > 30
+ORDER BY cost;
