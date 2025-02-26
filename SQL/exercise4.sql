@@ -86,4 +86,40 @@ HAVING SUM(revenue) < 1000
 ORDER BY "revenue";
 
 
---
+--Output the facility id that has the highest number of slots booked. For bonus points, try a version without a LIMIT clause. 
+--This version will probably look messy!
+SELECT facid,SUM(slots) AS "Total Slots" FROM 
+cd.bookings 
+GROUP BY facid
+ORDER BY "Total Slots" DESC
+LIMIT 1;
+
+--Produce a list of the total number of slots booked per facility per month in the year of 2012. In this version, include output 
+--rows containing totals for all months per facility, and a total for all months for all facilities. The output table should consist
+--of facility id, month and slots, sorted by the id and month. When calculating the aggregated values for all months and all facids,
+--return null values in the month and facid columns.
+SELECT facid, EXTRACT(MONTH FROM starttime) AS month, SUM(slots) AS slots
+FROM cd.bookings
+WHERE EXTRACT(YEAR FROM STARTTIME) = 2012
+GROUP BY ROLLUP(facid,month)
+ORDER BY facid,month;
+
+
+--Produce a list of the total number of hours booked per facility, remembering that a slot lasts half an hour. The output table 
+--should consist of the facility id, name, and hours booked, sorted by facility id. Try formatting the hours to two decimal places.
+SELECT book.facid,fac.name, TO_CHAR(SUM((slots * 30)) / 60::DECIMAL,'FM999999.00') AS "Total Hours"
+FROM cd.bookings book
+JOIN cd.facilities fac
+ON book.facid = fac.facid
+GROUP BY book.facid,fac.name
+ORDER BY facid;
+
+
+--Produce a list of each member name, id, and their first booking after September 1st 2012. Order by member ID.
+SELECT mem.surname,mem.firstname,mem.memid,MIN(book.starttime) AS "First Booking"
+FROM cd.members mem
+JOIN cd.bookings book
+ON mem.memid = book.memid
+WHERE book.starttime > '2012-09-01'
+GROUP BY mem.surname,mem.firstname,mem.memid
+ORDER BY mem.memid;
