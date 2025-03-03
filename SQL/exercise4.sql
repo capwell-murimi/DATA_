@@ -125,4 +125,9 @@ GROUP BY mem.surname,mem.firstname,mem.memid
 ORDER BY mem.memid;
 
 
---  
+--Produce a monotonically increasing numbered list of members (including guests), ordered by their date of joining.
+--Remember that member IDs are not guaranteed to be sequential.
+SELECT ROW_NUMBER() OVER(ORDER BY joindate ASC) AS "row_number",
+firstname,surname
+FROM cd.members
+ORDER BY "row_number";
