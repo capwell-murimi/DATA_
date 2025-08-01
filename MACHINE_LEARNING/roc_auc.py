@@ -52,7 +52,7 @@ p_tpr, p_fpr, threshrd = roc_curve(y_test, random_probs, pos_label=1)
 
 
 #plot the curves
-plt.plot(p_fpr,p_tpr, color='green', linestyle='--')
+plt.plot(p_fpr,p_tpr, color='green', linestyle='--', label='Random')
 plt.title('ROC Curve')
 plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
